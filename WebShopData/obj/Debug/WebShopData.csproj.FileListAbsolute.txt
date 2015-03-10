@@ -3,3 +3,9 @@ c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar
 c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\WebShopData\bin\Debug\WebShopData.pdb
 c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\WebShopData\obj\Debug\WebShopData.dll
 c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\WebShopData\obj\Debug\WebShopData.pdb
+C:\Users\Johan\Documents\Ny mapp\WebShopData\bin\Debug\WebShopData.dll.config
+C:\Users\Johan\Documents\Ny mapp\WebShopData\bin\Debug\WebShopData.dll
+C:\Users\Johan\Documents\Ny mapp\WebShopData\bin\Debug\WebShopData.pdb
+C:\Users\Johan\Documents\Ny mapp\WebShopData\obj\Debug\WebShopData.csprojResolveAssemblyReference.cache
+C:\Users\Johan\Documents\Ny mapp\WebShopData\obj\Debug\WebShopData.dll
+C:\Users\Johan\Documents\Ny mapp\WebShopData\obj\Debug\WebShopData.pdb

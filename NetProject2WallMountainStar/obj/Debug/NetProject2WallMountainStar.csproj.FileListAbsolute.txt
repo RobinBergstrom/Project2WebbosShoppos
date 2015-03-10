@@ -6,3 +6,11 @@ c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar
 c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\bin\WebShopData.pdb
 c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.dll
 c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.pdb
+C:\Users\Johan\Documents\Ny mapp\NetProject2WallMountainStar\bin\NetProject2WallMountainStar.dll.config
+C:\Users\Johan\Documents\Ny mapp\NetProject2WallMountainStar\bin\NetProject2WallMountainStar.dll
+C:\Users\Johan\Documents\Ny mapp\NetProject2WallMountainStar\bin\NetProject2WallMountainStar.pdb
+C:\Users\Johan\Documents\Ny mapp\NetProject2WallMountainStar\bin\WebShopData.dll
+C:\Users\Johan\Documents\Ny mapp\NetProject2WallMountainStar\bin\WebShopData.pdb
+C:\Users\Johan\Documents\Ny mapp\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.csprojResolveAssemblyReference.cache
+C:\Users\Johan\Documents\Ny mapp\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.dll
+C:\Users\Johan\Documents\Ny mapp\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.pdb
