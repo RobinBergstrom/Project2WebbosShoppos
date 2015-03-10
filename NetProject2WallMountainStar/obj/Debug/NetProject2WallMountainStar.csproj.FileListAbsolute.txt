@@ -1,0 +1,8 @@
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.csprojResolveAssemblyReference.cache
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\bin\NetProject2WallMountainStar.dll.config
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\bin\NetProject2WallMountainStar.dll
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\bin\NetProject2WallMountainStar.pdb
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\bin\WebShopData.dll
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\bin\WebShopData.pdb
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.dll
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.pdb

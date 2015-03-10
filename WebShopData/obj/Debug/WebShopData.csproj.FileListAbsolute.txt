@@ -1,0 +1,5 @@
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\WebShopData\bin\Debug\WebShopData.dll.config
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\WebShopData\bin\Debug\WebShopData.dll
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\WebShopData\bin\Debug\WebShopData.pdb
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\WebShopData\obj\Debug\WebShopData.dll
+c:\users\robin\documents\visual studio 2013\Projects\NetProject2WallMountainStar\WebShopData\obj\Debug\WebShopData.pdb
