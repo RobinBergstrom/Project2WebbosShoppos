@@ -8,15 +8,13 @@
     <link href="Styles/FirstStyle.css" rel="stylesheet" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-    </style>
-</head>
+    </head>
 <body>
     <form id="form1" runat="server">
-<header>MasterPageHeader</header>
+<header>MasterPageHeader<asp:DropDownList ID="DropDownListShoppingCart" runat="server">
+	<asp:ListItem>Cart</asp:ListItem>
+	</asp:DropDownList>
+		</header>
     <div>
     </div>
    

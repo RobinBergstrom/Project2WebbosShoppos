@@ -1,15 +1,16 @@
 ﻿body {
-	margin: 105px;
+	/*margin: 105px;
 	height: 407px;
-	width: 100%;
+	width: 100%;*/
 }
 
 #wrapper {
 	background-color: green;
 	height: 527px;
-	margin-top: 100px;
+	margin: 100px auto 100px auto;
 	border: 5px solid royalblue;
 	overflow: scroll;
+	width: 930px;
 }
 
 #LoginForm {
