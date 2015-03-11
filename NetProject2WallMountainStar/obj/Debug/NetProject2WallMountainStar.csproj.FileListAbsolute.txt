@@ -30,3 +30,11 @@ C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\NetProject2WallMountai
 C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.csprojResolveAssemblyReference.cache
 C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.dll
 C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.pdb
+C:\Users\Robin\Documents\Visual Studio 2013\Projects\NetProject2WallMountainStar\Project2WebbosShoppos\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.csprojResolveAssemblyReference.cache
+C:\Users\Robin\Documents\Visual Studio 2013\Projects\NetProject2WallMountainStar\Project2WebbosShoppos\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.dll
+C:\Users\Robin\Documents\Visual Studio 2013\Projects\NetProject2WallMountainStar\Project2WebbosShoppos\NetProject2WallMountainStar\bin\NetProject2WallMountainStar.dll.config
+C:\Users\Robin\Documents\Visual Studio 2013\Projects\NetProject2WallMountainStar\Project2WebbosShoppos\NetProject2WallMountainStar\bin\NetProject2WallMountainStar.dll
+C:\Users\Robin\Documents\Visual Studio 2013\Projects\NetProject2WallMountainStar\Project2WebbosShoppos\NetProject2WallMountainStar\bin\NetProject2WallMountainStar.pdb
+C:\Users\Robin\Documents\Visual Studio 2013\Projects\NetProject2WallMountainStar\Project2WebbosShoppos\NetProject2WallMountainStar\bin\WebShopData.dll
+C:\Users\Robin\Documents\Visual Studio 2013\Projects\NetProject2WallMountainStar\Project2WebbosShoppos\NetProject2WallMountainStar\bin\WebShopData.pdb
+C:\Users\Robin\Documents\Visual Studio 2013\Projects\NetProject2WallMountainStar\Project2WebbosShoppos\NetProject2WallMountainStar\obj\Debug\NetProject2WallMountainStar.pdb

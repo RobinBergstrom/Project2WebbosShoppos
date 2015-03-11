@@ -11,51 +11,36 @@ namespace NetProject2WallMountainStar
 {
 	public partial class WebForm1 : System.Web.UI.Page
 	{
-		public List<OrderRow> cartList;
+		
 
 		protected void Page_Load(object sender, EventArgs e)
 		{
-		
+			var name = User.Identity.Name;
+            
+
 		}
 		protected void Button_AddToCart_Click(object sender, EventArgs e)
 		{
 			
-			//int id = int.Parse(GridView1.SelectedRow.Cells[1].Text);
-			//string name = (GridView1.SelectedRow.Cells[2].Text);
-			//double price = double.Parse(GridView1.SelectedRow.Cells[3].Text);
+			((List<string>)Session["CartList"]).Add(GridView1.SelectedRow.Cells[2].Text);
 
-			DropDownList shoppingcart = Master.FindControl("DropDownListShoppingCart") as DropDownList;
-			
-			shoppingcart.Items.Add(GridView1.SelectedRow.Cells[2].Text);
-
-			//cartList = new List<OrderRow>();
-			//cartList.Add(new OrderRow(id));
-			DropDownList testList = Master.FindControl("DropDownListTestList") as DropDownList;
-			Session["Order"] = shoppingcart;
-			//order.OrderRows 
-			Order currentOrder = (Order)Session["CurrentOrder"];
-			
-
-			foreach (var item in shoppingcart.Items)
+			((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Clear();
+		   foreach (var productName in (List<string>)Session["CartList"])
 			{
-				testList.Items.Add(item.ToString());
+				((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Add(productName);
 			}
 
 
-			//Session["Order"] = shoppingcart;
-
-
-
-			//foreach (var item in cartList)
-			//{
-			//	TextBox1.Text += item.ArticleID + " " + item.Quantity + "\r\n";
-
-			//}
 		}
 
 		protected void Button_Checkout_Click(object sender, EventArgs e)
 		{
 			Response.Redirect("Checkout.aspx");
+		}
+
+		protected void Button_SignOut_Click(object sender, EventArgs e)
+		{
+
 		}
 	}
 }

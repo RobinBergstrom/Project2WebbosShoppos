@@ -3,7 +3,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
-    <div class="wrapper">
+    <div class="wrapper"> <h1>Welcome <%:User.Identity.Name %></h1>
 		<asp:GridView ID="GridView1" runat="server" Height="16px" style="margin-top: 5px" Width="405px" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="ArticleID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical">
 			<AlternatingRowStyle BackColor="#CCCCCC" />
 			<Columns>
@@ -24,6 +24,7 @@
 		<asp:Button ID="Button_AddToCart" runat="server" OnClick="Button_AddToCart_Click" Text="Add to cart" />
 		<asp:Button ID="Button_Checkout" runat="server" Height="28px" OnClick="Button_Checkout_Click" Text="Proceed to checkout" Width="200px" />
 		<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopConnectionString %>" SelectCommand="SELECT * FROM [Articles]"></asp:SqlDataSource>
+	    <asp:Button ID="Button_SignOut" runat="server" OnClick="Button_SignOut_Click" Text="Sign Out" />
 	</div>
 	</asp:Content>
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebShopData;
@@ -19,7 +20,8 @@ namespace NetProject2WallMountainStar
         {
             if (UserData.Authenticate(TextBox_Username.Text, TextBox_Password.Text))
             {
-                Response.Redirect("WebForm1.aspx");
+                FormsAuthentication.RedirectFromLoginPage(TextBox_Username.Text, false);
+
             }
         }
     }

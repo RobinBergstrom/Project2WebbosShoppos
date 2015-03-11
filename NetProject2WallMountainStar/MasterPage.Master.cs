@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebShopData;
@@ -9,17 +10,17 @@ using WebShopData;
 namespace NetProject2WallMountainStar
 {
     public partial class MasterPage : System.Web.UI.MasterPage
-    {	 
+    {
+       
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Order"] != null)
-            {
-                
-            }
-            else
-            {
-                
-            }
+          Label1.Text =  HttpContext.Current.User.Identity.Name;
+        }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
         }
     }
 }

@@ -11,11 +11,7 @@ namespace WebShopData
 	
 		public class OrderRow
 		{
-            //public OrderRow(int articleID)
-            //{
-            //    ArticleID = articleID;
-            //    //Quantity = quantity;
-            //}
+            
 			public int ArticleID { get; set; }
 			public int Quantity { get; set; }
 
