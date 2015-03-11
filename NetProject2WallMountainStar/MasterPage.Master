@@ -14,6 +14,8 @@
 <header>MasterPageHeader<asp:DropDownList ID="DropDownListShoppingCart" runat="server">
 	<asp:ListItem>Cart</asp:ListItem>
 	</asp:DropDownList>
+		<asp:DropDownList ID="DropDownListTestList" runat="server">
+    </asp:DropDownList>
 		</header>
     <div>
     </div>

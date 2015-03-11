@@ -3,9 +3,14 @@
 	height: 407px;
 	width: 100%;*/
 }
+.auto-styleCheckOut {
+	background-color: blueviolet;
+	color: black;
+	border: 5px solid coral;
+}
 
-#wrapper {
-	background-color: green;
+.wrapper {
+	background-color: chartreuse;
 	height: 527px;
 	margin: 100px auto 100px auto;
 	border: 5px solid royalblue;

@@ -4,22 +4,14 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using WebShopData;
 
 namespace NetProject2WallMountainStar
 {
-    public partial class MasterPage : System.Web.UI.MasterPage
-    {	 
+    public partial class ErrorPage : System.Web.UI.Page
+    {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Order"] != null)
-            {
-                
-            }
-            else
-            {
-                
-            }
+
         }
     }
 }

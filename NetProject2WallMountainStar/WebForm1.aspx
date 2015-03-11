@@ -3,7 +3,7 @@
 </asp:Content>
 
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
-	<div id="wrapper">
+    <div class="wrapper">
 		<asp:GridView ID="GridView1" runat="server" Height="16px" style="margin-top: 5px" Width="405px" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="ArticleID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical">
 			<AlternatingRowStyle BackColor="#CCCCCC" />
 			<Columns>

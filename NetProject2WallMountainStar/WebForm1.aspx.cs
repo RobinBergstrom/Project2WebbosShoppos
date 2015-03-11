@@ -23,18 +23,25 @@ namespace NetProject2WallMountainStar
 			//int id = int.Parse(GridView1.SelectedRow.Cells[1].Text);
 			//string name = (GridView1.SelectedRow.Cells[2].Text);
 			//double price = double.Parse(GridView1.SelectedRow.Cells[3].Text);
+
+			DropDownList shoppingcart = Master.FindControl("DropDownListShoppingCart") as DropDownList;
 			
-			//var shoppingcart = Master.FindControl("DropDownListShoppingCart") as DropDownList;
-			//shoppingcart.Items.Add(GridView1.SelectedRow.Cells[2].Text);
+			shoppingcart.Items.Add(GridView1.SelectedRow.Cells[2].Text);
 
 			//cartList = new List<OrderRow>();
 			//cartList.Add(new OrderRow(id));
-			Order order = (Order)Session["Order"];
-			Session["Cart"] = Master.FindControl("DropDownListShoppingCart") as DropDownList;
+			DropDownList testList = Master.FindControl("DropDownListTestList") as DropDownList;
+			Session["Order"] = shoppingcart;
+			//order.OrderRows 
+			Order currentOrder = (Order)Session["CurrentOrder"];
 			
-				
-			
-				
+
+			foreach (var item in shoppingcart.Items)
+			{
+				testList.Items.Add(item.ToString());
+			}
+
+
 			//Session["Order"] = shoppingcart;
 
 
