@@ -19,11 +19,12 @@ namespace NetProject2WallMountainStar
 
 		protected void Session_Start(object sender, EventArgs e)
 		{
-		    Session["CartList"] = new List<string>();
+			//Session["CartList"] = new List<string>();
 			//Session["CurrentOrder"] = new Order("Olle","Ollesson","Ollegatan 12","Olletown","22222","jaja@gmail.com");
-		    Session["CurrentOrder"] = new Order();
+		    Session["CurrentOrder"] = new Order("", "", "", 1);
 		    //var shoppingcart = Master.FindControl("DropDownListShoppingCart") as DropDownList;
 		    //sessionstartcartlist = new List<OrderRow>();
+			
 		}
 
 		protected void Application_BeginRequest(object sender, EventArgs e)
@@ -43,7 +44,7 @@ namespace NetProject2WallMountainStar
 
 		protected void Session_End(object sender, EventArgs e)
 		{
-			Session["Order"] = null;
+			Session["CurrentOrder"] = null;
 		}
 
 		protected void Application_End(object sender, EventArgs e)

@@ -15,26 +15,23 @@ namespace NetProject2WallMountainStar
 		{
 			ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
 
-			if (((List<string>)Session["CartList"]).Count > 0)
+			var order = (Order)Session["CurrentOrder"];
+
+			DropDownList masterDropDownList = ((DropDownList) Master.FindControl("DropDownListShoppingCart"));
+
+			if (order.OrderRows.Count > 0)
 			{
-                
-                    ((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Clear();
-					foreach (var productName in (List<string>)Session["CartList"])
-					{
-						((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Add(productName);
-					}
-                
+				masterDropDownList.Items.Clear();
+				foreach (var item in order.OrderRows)
+				{
+					masterDropDownList.Items.Add(item.ToString());
+				}
 			}
             else
             {
-                ((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Clear();
-                ((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Add("Empty Cart");
-
+                masterDropDownList.Items.Clear();
+                masterDropDownList.Items.Add("Empty Cart");
             }
-
-
-		   Order order = (Order)Session["Order"];
-			
 		}
 
 		protected void Button_Submit_Click(object sender, EventArgs e)
