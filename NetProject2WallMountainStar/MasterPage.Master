@@ -14,7 +14,7 @@
 <header>MasterPageHeader<asp:DropDownList ID="DropDownListShoppingCart" runat="server">
 	<asp:ListItem>Cart</asp:ListItem>
 	</asp:DropDownList>
-		<asp:Button ID="Button_SignOut" runat="server" CausesValidation="False" OnClick="Button1_Click" Text="Sign out" />
+		<asp:Button ID="Button_SignOut" runat="server" CausesValidation="False" OnClick="Button_SignOut_Click" Text="Sign out" />
     <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     <br />
 		</header>

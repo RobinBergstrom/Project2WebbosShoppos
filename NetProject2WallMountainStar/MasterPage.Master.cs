@@ -17,10 +17,10 @@ namespace NetProject2WallMountainStar
           Label1.Text =  HttpContext.Current.User.Identity.Name;
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            FormsAuthentication.SignOut();
-            FormsAuthentication.RedirectToLoginPage();
-        }
+		protected void Button_SignOut_Click(object sender, EventArgs e)
+		{
+			FormsAuthentication.SignOut();
+			FormsAuthentication.RedirectToLoginPage();
+		}
     }
 }

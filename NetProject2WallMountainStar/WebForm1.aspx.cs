@@ -6,75 +6,61 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using WebShopData;
+using WebShopData.DataSet1TableAdapters;
 
 namespace NetProject2WallMountainStar
 {
 	public partial class WebForm1 : System.Web.UI.Page
 	{
-		private string name;
-
 		protected void Page_Load(object sender, EventArgs e)
 		{
-			name = User.Identity.Name;
-
-
 		}
 		protected void Button_AddToCart_Click(object sender, EventArgs e)
 		{
-
-			// ((List<string>)Session["CartList"]).Add(GridView1.SelectedRow.Cells[2].Text);
-
-			// ((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Clear();
-			//foreach (var productName in (List<string>)Session["CartList"])
-			// {
-			//	 ((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Add(productName);
-			// }
-
-			//OrderRow orderRow = null;
-
-
-
-
 			var order = (Order)Session["CurrentOrder"];
 
-			int articleid = (int.Parse(GridView1.SelectedRow.Cells[1].Text));
+			AddOrderRow(order);
 
-			if (order.OrderRows.Count == 0)
-			{
-				order.OrderRows.Add(new OrderRow(int.Parse(GridView1.SelectedRow.Cells[1].Text),
-					(GridView1.SelectedRow.Cells[2].Text), 1));
-			}
-			else
-			{
-				if (!LoopOrderRows(order, articleid))
-				{
-					order.OrderRows.Add(new OrderRow(int.Parse(GridView1.SelectedRow.Cells[1].Text),
-					(GridView1.SelectedRow.Cells[2].Text), 1));
-				}
-			}
-			//OrderRow orderRow = new OrderRow(int.Parse(GridView1.SelectedRow.Cells[1].Text), GridView1.SelectedRow.Cells[2].Text);
+			AddToDropDownList(order);
+		}
 
-			((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Clear();
+		private void AddToDropDownList(Order order)
+		{
+			ArticlesTableAdapter articlesTableAdapter = new ArticlesTableAdapter();
+
+			var shoppingCart = ((DropDownList) Master.FindControl("DropDownListShoppingCart"));
+			shoppingCart.Items.Clear();
+
 			foreach (var item in order.OrderRows)
 			{
-					((DropDownList)Master.FindControl("DropDownListShoppingCart")).Items.Add(item.ToString());
+				shoppingCart.Items.Add(articlesTableAdapter.GetProductNameQuery(item.ArticleID) + " " + item.ToString());
 			}
 		}
 
-		private static bool LoopOrderRows(Order order, int articleid)
+		private void AddOrderRow(Order order)
 		{
-			bool flag = false;
-			foreach (var row in order.OrderRows)
+
+			if (order == null)
+				return;
+
+
+			bool hasAdded = false;
+			int articleid = (int.Parse(GridView1.SelectedRow.Cells[1].Text));
+			order.OrderRows.ForEach(x =>
 			{
-				if (articleid == row.ArticleID)
+				if (x.ArticleID == articleid)
 				{
-					row.Quantity += 1;
-					flag = true;
+					x.Quantity++;
+					hasAdded = true;
 				}
-			
+			});
+			if (!hasAdded)
+			{
+				order.OrderRows.Add(new OrderRow(int.Parse(GridView1.SelectedRow.Cells[1].Text), 1));
 			}
-			return flag;
 		}
+
+
 
 		protected void Button_Checkout_Click(object sender, EventArgs e)
 		{

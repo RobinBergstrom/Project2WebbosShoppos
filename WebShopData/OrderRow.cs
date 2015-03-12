@@ -11,19 +11,21 @@ namespace WebShopData
 	
 		public class OrderRow
 		{
-			public OrderRow(int articleid = 0, string name = "", int quantity = 0)
+			public OrderRow(int articleid, int quantity = 0)
 			{
 				ArticleID = articleid;
-				Name = name;
+				//Name = name;
 				Quantity = quantity;
+				//Price = price;
 			}
 			public int ArticleID { get; set; }
-			public string Name { get; set; }
+			//public string Name { get; set; }
 			public int Quantity { get; set; }
+			//public double Price { get; set; }
 
 			public override string ToString()
 			{
-				return string.Format("Product: {0}  Qty: {1}", Name, Quantity);
+				return string.Format("Qty: {0}", Quantity);
 			}
 		}
 	
