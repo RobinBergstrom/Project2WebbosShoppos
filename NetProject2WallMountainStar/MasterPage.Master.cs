@@ -23,5 +23,10 @@ namespace NetProject2WallMountainStar
 			Session["CurrentOrder"] = new Order("", "", "", 1);
 			FormsAuthentication.RedirectToLoginPage();
 		}
+
+		protected void DropDownListShoppingCart_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

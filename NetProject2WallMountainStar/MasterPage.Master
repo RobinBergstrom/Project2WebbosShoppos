@@ -11,7 +11,7 @@
 	</head>
 <body>
 	<form id="form1" runat="server">
-<header>MasterPageHeader<asp:DropDownList ID="DropDownListShoppingCart" runat="server">
+<header>MasterPageHeader<asp:DropDownList ID="DropDownListShoppingCart" runat="server" EnableViewState="False" OnSelectedIndexChanged="DropDownListShoppingCart_SelectedIndexChanged">
 	<asp:ListItem>Cart</asp:ListItem>
 	</asp:DropDownList>
 		<asp:Button ID="Button_SignOut" runat="server" CausesValidation="False" OnClick="Button_SignOut_Click" Text="Sign out" />

@@ -14,7 +14,7 @@
                             <asp:Label ID="Label_Address" runat="server" Text="Address"></asp:Label>
                         </td>
                         <td>
-                            <asp:TextBox ID="TextBox_Address" runat="server"></asp:TextBox>
+                            <asp:TextBox ID="TextBox_Address" runat="server" MaxLength="15"></asp:TextBox>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="TextBox_Address" ErrorMessage="Enter address" ForeColor="Red">*</asp:RequiredFieldValidator>
                         </td>
                     </tr>

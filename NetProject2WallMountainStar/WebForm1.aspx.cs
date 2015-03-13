@@ -20,29 +20,37 @@ namespace NetProject2WallMountainStar
 		}
 		protected void Button_AddToCart_Click(object sender, EventArgs e)
 		{
-			var order = (Order)Session["CurrentOrder"];
+			if (IsPostBack)
+			{
+				var order = (Order)Session["CurrentOrder"];
 
-			AddOrderRow(order);
+				AddOrderRow(order);
 
-			AddToDropDownList(order);
+				AddToDropDownList(order);
+			}
 		}
 		private void AddToDropDownList(Order order)
 		{
+			int quantity = (int) Session["quantity"];
 			ArticlesTableAdapter articlesTableAdapter = new ArticlesTableAdapter();
 
 			var shoppingCart = ((DropDownList) Master.FindControl("DropDownListShoppingCart"));
 			shoppingCart.Items.Clear();
-
+			shoppingCart.Items.Add(string.Format("Cart ({0})", quantity));
 			foreach (var item in order.OrderRows)
 			{
 				shoppingCart.Items.Add(articlesTableAdapter.GetProductNameQuery(item.ArticleID) + " " + item.ToString());
+				
 			}
 		}
 		private void AddOrderRow(Order order)
 		{
 			if (order == null || GridView1.SelectedRow == null)
 				return;
-
+			int quantity = (int)Session["quantity"];
+		
+			quantity++;
+			Session["quantity"] = quantity;
 			bool hasAdded = false;
 			int articleid = (int.Parse(GridView1.SelectedRow.Cells[1].Text));
 			order.OrderRows.ForEach(x =>
@@ -77,6 +85,18 @@ namespace NetProject2WallMountainStar
 			var shoppingCart = ((DropDownList)Master.FindControl("DropDownListShoppingCart"));
 			shoppingCart.Items.Clear();
 
+		}
+
+		protected void Gridviewbutton_Buy(object sender, EventArgs e)
+		{
+			if (IsPostBack)
+			{
+				var order = (Order)Session["CurrentOrder"];
+
+				AddOrderRow(order);
+
+				AddToDropDownList(order);
+			}
 		}
 	}
 }

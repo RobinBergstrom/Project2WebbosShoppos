@@ -4,13 +4,18 @@
 
 <asp:Content ID="Content2" runat="server" contentplaceholderid="ContentPlaceHolder1">
     <div class="wrapper"> <h1>Welcome <%:User.Identity.Name %></h1>
-		<asp:GridView ID="GridView1" runat="server" Height="16px" style="margin-top: 5px" Width="405px" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="ArticleID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical">
+		<asp:GridView ID="GridView1" runat="server" Height="16px" style="margin-top: 5px" Width="574px" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" DataKeyNames="ArticleID" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="Vertical" OnSelectedIndexChanged="Gridviewbutton_Buy" EnableViewState="False">
 			<AlternatingRowStyle BackColor="#CCCCCC" />
 			<Columns>
-				<asp:CommandField ShowSelectButton="True" />
+				<asp:ButtonField ButtonType="Image" ImageUrl="~/Images/lg-55ub950v(214306)_Small.jpg" Text="Button">
+				<HeaderStyle Height="50px" Width="50px" />
+				</asp:ButtonField>
 				<asp:BoundField DataField="ArticleID" HeaderText="ArticleID" InsertVisible="False" ReadOnly="True" SortExpression="ArticleID" />
-				<asp:BoundField DataField="Text" HeaderText="Text" SortExpression="Text" />
-				<asp:BoundField DataField="Unitprice" HeaderText="Unitprice" SortExpression="Unitprice" />
+				<asp:BoundField DataField="Text" HeaderText="Product" SortExpression="Text" >
+				<HeaderStyle Wrap="True" />
+				</asp:BoundField>
+				<asp:BoundField DataField="Unitprice" HeaderText="Price" SortExpression="Unitprice" DataFormatString="{0:c0}" />
+				<asp:CommandField ShowSelectButton="True" ButtonType="Button" SelectText="Buy" />
 			</Columns>
 			<FooterStyle BackColor="#CCCCCC" />
 			<HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />

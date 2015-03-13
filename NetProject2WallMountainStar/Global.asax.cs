@@ -19,6 +19,8 @@ namespace NetProject2WallMountainStar
 		protected void Session_Start(object sender, EventArgs e)
 		{
 			Session["CurrentOrder"] = new Order("", "", "", 1);
+			Session["Email"] = "";
+			Session["quantity"] = 0;
 		}
 
 		protected void Application_BeginRequest(object sender, EventArgs e)
@@ -34,6 +36,7 @@ namespace NetProject2WallMountainStar
 		protected void Application_Error(object sender, EventArgs e)
 		{
 			//Response.Redirect("ErrorPage.aspx");
+
 		}
 
 		protected void Session_End(object sender, EventArgs e)

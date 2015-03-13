@@ -57,7 +57,7 @@ namespace NetProject2WallMountainStar
 			order.City = TextBox_City.Text;
 			order.Zip = TextBox_Zip.Text;
 			order.UserID = (int)usersTableAdapter.GetUserIdByUsernameQuery(User.Identity.Name);
-
+			Session["Email"] = TextBox_Email.Text;
 
 			WebShopDAL webShopDal = new WebShopDAL();
 			webShopDal.AddOrderToDB(order);
