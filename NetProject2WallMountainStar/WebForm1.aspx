@@ -24,7 +24,7 @@
 		<asp:Button ID="Button_AddToCart" runat="server" OnClick="Button_AddToCart_Click" Text="Add to cart" />
 		<asp:Button ID="Button_Checkout" runat="server" Height="28px" OnClick="Button_Checkout_Click" Text="Proceed to checkout" Width="200px" />
 		<asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:WebShopConnectionString %>" SelectCommand="SELECT * FROM [Articles]"></asp:SqlDataSource>
-	    <asp:Button ID="Button_SignOut" runat="server" OnClick="Button_SignOut_Click" Text="Sign Out" />
+	    <asp:Button ID="Button_ClearCart" runat="server" OnClick="Button_ClearCart_Click" Text="Clear cart" />
 	</div>
 	</asp:Content>
 
