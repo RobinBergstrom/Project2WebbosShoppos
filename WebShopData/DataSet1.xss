@@ -7,12 +7,12 @@
 <DiagramLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ex:showrelationlabel="False" ViewPortX="0" ViewPortY="0" xmlns:ex="urn:schemas-microsoft-com:xml-msdatasource-layout-extended" xmlns="urn:schemas-microsoft-com:xml-msdatasource-layout">
   <Shapes>
     <Shape ID="DesignTable:Articles" ZOrder="7" X="379" Y="70" Height="181" Width="290" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
-    <Shape ID="DesignTable:OrderHead" ZOrder="6" X="379" Y="298" Height="227" Width="245" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
-    <Shape ID="DesignTable:OrderRow" ZOrder="5" X="70" Y="70" Height="181" Width="239" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
-    <Shape ID="DesignTable:Users" ZOrder="4" X="694" Y="298" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
+    <Shape ID="DesignTable:OrderHead" ZOrder="1" X="379" Y="298" Height="227" Width="245" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="168" />
+    <Shape ID="DesignTable:OrderRow" ZOrder="6" X="70" Y="70" Height="181" Width="239" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="122" />
+    <Shape ID="DesignTable:Users" ZOrder="5" X="694" Y="298" Height="181" Width="300" AdapterExpanded="true" DataTableExpanded="true" OldAdapterHeight="0" OldDataTableHeight="0" SplitterPosition="99" />
   </Shapes>
   <Connectors>
-    <Connector ID="DesignRelation:FK_ArticleID_ArticlesArticleID" ZOrder="3" LineWidth="11">
+    <Connector ID="DesignRelation:FK_ArticleID_ArticlesArticleID" ZOrder="4" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>379</X>
@@ -24,7 +24,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_OrderID_OrderHeadOrderID" ZOrder="2" LineWidth="11">
+    <Connector ID="DesignRelation:FK_OrderID_OrderHeadOrderID" ZOrder="3" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>379</X>
@@ -40,7 +40,7 @@
         </Point>
       </RoutePoints>
     </Connector>
-    <Connector ID="DesignRelation:FK_UserID_UserID" ZOrder="1" LineWidth="11">
+    <Connector ID="DesignRelation:FK_UserID_UserID" ZOrder="2" LineWidth="11">
       <RoutePoints>
         <Point>
           <X>694</X>

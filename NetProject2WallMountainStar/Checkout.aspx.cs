@@ -33,25 +33,6 @@ namespace NetProject2WallMountainStar
 				shoppingCart.Items.Add(articlesTableAdapter.GetProductNameQuery(item.ArticleID) + " " + item.ToString());
 			}
 		}
-
-		//private void FillDropDownList(Order order)
-		//{
-		//	DropDownList masterDropDownList = ((DropDownList) Master.FindControl("DropDownListShoppingCart"));
-
-		//	if (order.OrderRows.Count > 0)
-		//	{
-		//		masterDropDownList.Items.Clear();
-		//		foreach (var item in order.OrderRows)
-		//		{
-		//			masterDropDownList.Items.Add(item.ToString());
-		//		}
-		//	}
-		//	else
-		//	{
-		//		masterDropDownList.Items.Clear();
-		//		masterDropDownList.Items.Add("Empty Cart");
-		//	}
-		//}
 		protected string GetProductNameByArticleId(int articleId)
 		{
 			var articleAdapter = new ArticlesTableAdapter();
@@ -80,6 +61,12 @@ namespace NetProject2WallMountainStar
 
 			WebShopDAL webShopDal = new WebShopDAL();
 			webShopDal.AddOrderToDB(order);
+			Server.Transfer("OrderConfirmationSite.aspx");
 		}
+
+        protected void Button_Cancel_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("WebForm1.aspx");
+        }
 	}
 }

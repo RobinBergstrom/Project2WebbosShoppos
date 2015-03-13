@@ -11,7 +11,6 @@ namespace NetProject2WallMountainStar
 {
 	public class Global : System.Web.HttpApplication
 	{
-		//public List<OrderRow> sessionstartcartlist;
 		protected void Application_Start(object sender, EventArgs e)
 		{
 
@@ -19,7 +18,7 @@ namespace NetProject2WallMountainStar
 
 		protected void Session_Start(object sender, EventArgs e)
 		{
-		    Session["CurrentOrder"] = new Order("", "", "", 1);
+			Session["CurrentOrder"] = new Order("", "", "", 1);
 		}
 
 		protected void Application_BeginRequest(object sender, EventArgs e)
@@ -39,7 +38,7 @@ namespace NetProject2WallMountainStar
 
 		protected void Session_End(object sender, EventArgs e)
 		{
-			Session["CurrentOrder"] = null;
+			Session["CurrentOrder"] = new Order("", "", "", 1);
 		}
 
 		protected void Application_End(object sender, EventArgs e)

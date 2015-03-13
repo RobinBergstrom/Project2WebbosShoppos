@@ -18,7 +18,6 @@ C:\Users\Johan\Documents\Skola\YH .NET Framework\Projekt 2\WebShopData\obj\Debug
 C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\WebShopData\bin\Debug\WebShopData.dll.config
 C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\WebShopData\bin\Debug\WebShopData.dll
 C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\WebShopData\bin\Debug\WebShopData.pdb
-C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\WebShopData\obj\Debug\WebShopData.csprojResolveAssemblyReference.cache
 C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\WebShopData\obj\Debug\WebShopData.dll
 C:\Users\jakob_000\Documents\GitHub\Project2WebbosShoppos\WebShopData\obj\Debug\WebShopData.pdb
 C:\Users\Robin\Documents\Visual Studio 2013\Projects\NetProject2WallMountainStar\Project2WebbosShoppos\WebShopData\bin\Debug\WebShopData.dll.config

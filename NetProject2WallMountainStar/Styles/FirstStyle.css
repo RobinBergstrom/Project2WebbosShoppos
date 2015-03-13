@@ -3,17 +3,34 @@
 	height: 407px;
 	width: 100%;*/
 }
-.auto-styleCheckOut {
+#FormInfoAndValidationSummary {
+    align-items: flex-start;
+}
+#tempDiv {
+    background-color: orange;
+    display: inline-block;
 	border-radius: 15px;
 		border-bottom: 15px solid brown;
 	border-right: 10px solid coral;
+}
+#ValidationSummary {
+    margin: auto;
+    display: inline-block;
+    
+}
+.auto-styleCheckOut {
+    /*background-color: orange;
+    display: inline-block;
+    /*margin: auto auto;
+	border-radius: 15px;
+		border-bottom: 15px solid brown;
+	border-right: 10px solid coral;*/
 }
 
 .wrapper {
 	background-color: grey;
 	height: 527px;
 	margin: 100px auto 100px auto;
-	overflow: scroll;
 	width: 930px;
 	border-radius: 15px;
 	border-bottom: 15px solid brown;
@@ -46,7 +63,16 @@ footer {
 	background-color: coral;
 }
 #receiptWrapper {
+    margin: auto auto;
+    display: inline-block;
 	border-radius: 15px;
 		border-bottom: 15px solid brown;
 	border-right: 10px solid coral;
+}
+#button_SubmitOrder {
+    background-color: green;
+    float: right;
+}
+#button_CancelOrder {
+    background-color: red;
 }
