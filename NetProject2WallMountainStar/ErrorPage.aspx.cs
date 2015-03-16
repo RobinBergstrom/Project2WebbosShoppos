@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using WebShopData;
 
 namespace NetProject2WallMountainStar
 {
@@ -11,7 +13,17 @@ namespace NetProject2WallMountainStar
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                Server.Transfer("Webform1.aspx");
+            }
+        }
 
+        protected void Button_BackToLogin_Click(object sender, EventArgs e)
+        {
+            FormsAuthentication.SignOut();
+            Session["CurrentOrder"] = new Order("", "", "", 1);
+            FormsAuthentication.RedirectToLoginPage();
         }
     }
 }

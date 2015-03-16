@@ -35,7 +35,10 @@ namespace NetProject2WallMountainStar
 
 		protected void Application_Error(object sender, EventArgs e)
 		{
-			//Response.Redirect("ErrorPage.aspx");
+		    var error = Server.GetLastError();
+		    Session["ErrorMessage"] = error.Message;
+            Server.ClearError();
+			Response.Redirect("ErrorPage.aspx");
 
 		}
 

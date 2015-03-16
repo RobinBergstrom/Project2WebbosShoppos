@@ -1,21 +1,32 @@
-﻿body {
-	/*margin: 105px;
-	height: 407px;
-	width: 100%;*/
+﻿html {
+    font-family: monospace;
+    background-image: url('../Images/lg-tv.jpg');
+    -ms-background-size: 100%;
+    background-size: 100%;        
+}
+
+body {
+    padding: 43px;
+    height: 100px;
+}
+form {
+    height: 100px;
+}
+#checkoutform {
+    width: 350px;
+    margin: 0 auto;
+    color: white;
 }
 #FormInfoAndValidationSummary {
-    align-items: flex-start;
+    /*align-items: flex-start;*/
 }
 #tempDiv {
-    background-color: orange;
     display: inline-block;
-	border-radius: 15px;
-		border-bottom: 15px solid brown;
-	border-right: 10px solid coral;
+   border-bottom: 1px dotted white;
 }
 #ValidationSummary {
-    margin: auto;
-    display: inline-block;
+    /*margin: auto;
+    display: inline-block;*/
     
 }
 .auto-styleCheckOut {
@@ -27,17 +38,26 @@
 	border-right: 10px solid coral;*/
 }
 
-.wrapper {
-	background-color: grey;
-	height: 527px;
-	margin: 100px auto 100px auto;
-	width: 930px;
-	border-radius: 15px;
-	border-bottom: 15px solid brown;
-	border-right: 10px solid coral;
-	overflow: scroll;
+#labelEmptyCart {
+    color: red;
 }
+.wrapper {
+	height: 520px;
+	margin: 5px auto 13px auto;
+	width: 930px;
 
+
+}
+#contentplaceholder {
+    overflow-y: scroll;
+}
+#signout {
+    float: right;
+    padding-right: 40px;
+}
+#headerWrapper {
+    padding-left: 40px;  
+}
 #LoginForm {
 	max-width: 300px;
 	margin: 300px auto;
@@ -48,33 +68,39 @@
 
 header {
 	width: 100%;
-	height: 100px;
+	height: 40px;
 	top: 0;
 	left: 0;
-	background-color: coral;
+    line-height: 40px;
+	/*background-color: coral;*/
 	position: relative;
+    color: white;
 
 }
 
 footer {
 	width: 100%;
-	height: 100px;
+	height: 0px;
 	position: relative;
 	bottom: 0;
 	left: 0;
-	background-color: coral;
+	/*background-color: coral;*/
 }
 #receiptWrapper {
-    margin: auto auto;
+    width: 100%;
+    margin: auto 0;
     display: inline-block;
-	border-radius: 15px;
-		border-bottom: 15px solid brown;
-	border-right: 10px solid coral;
+    border-bottom: 1px dotted white;
 }
-#button_SubmitOrder {
-    background-color: green;
+.buttonsubmit {
+    border: solid 1px green;
+    margin: 5px;
     float: right;
 }
-#button_CancelOrder {
-    background-color: red;
+.buttoncancel {
+    border: solid 1px darkred;
+    margin: 5px;}
+#totalpricetable {
+    float: right;
+    padding-right: 31px;
 }

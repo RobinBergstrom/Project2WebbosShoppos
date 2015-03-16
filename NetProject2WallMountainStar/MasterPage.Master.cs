@@ -28,5 +28,18 @@ namespace NetProject2WallMountainStar
 		{
 
 		}
+
+	   
+	    protected void Button_ClearCart_Click(object sender, EventArgs e)
+		{
+			Session["CurrentOrder"] = new Order("", "", "", 1);
+	        Session["quantity"] = 0;
+
+	        DropDownListShoppingCart.Items.Clear();
+            DropDownListShoppingCart.Items.Add(string.Format("Cart ({0})", 0));
+		
+
+		}
+        
 	}
 }

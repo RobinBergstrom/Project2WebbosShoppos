@@ -15,8 +15,11 @@ namespace NetProject2WallMountainStar
 	{
 		protected void Page_Load(object sender, EventArgs e)
 		{
+		    Label_EmptyCart.Visible = false;
 			var order = (Order)Session["CurrentOrder"];
 			AddToDropDownList(order);
+            var button_clear = ((Button)Master.FindControl("Button_ClearCartMaster"));
+		    button_clear.Visible = true;
 		}
 		protected void Button_AddToCart_Click(object sender, EventArgs e)
 		{
@@ -75,17 +78,11 @@ namespace NetProject2WallMountainStar
 			}
 			else
 			{
-				ScriptManager.RegisterClientScriptBlock(Page, typeof (Page), "ClientScript", "alert('Your cart is empty! Please add something to the cart.')", true);
+			    Label_EmptyCart.Visible = true;
 			}
 		}
 
-		protected void Button_ClearCart_Click(object sender, EventArgs e)
-		{
-			Session["CurrentOrder"] = new Order("", "", "", 1);
-			var shoppingCart = ((DropDownList)Master.FindControl("DropDownListShoppingCart"));
-			shoppingCart.Items.Clear();
-
-		}
+		
 
 		protected void Gridviewbutton_Buy(object sender, EventArgs e)
 		{

@@ -17,6 +17,10 @@ namespace NetProject2WallMountainStar
 			ValidationSettings.UnobtrusiveValidationMode = UnobtrusiveValidationMode.None;
 
 			var order = (Order)Session["CurrentOrder"];
+			var clearButton = ((Button)Master.FindControl("Button_ClearCartMaster"));
+			clearButton.Visible = false;
+
+			
 
 			AddToDropDownList(order);
 
@@ -27,6 +31,8 @@ namespace NetProject2WallMountainStar
 
 			var shoppingCart = ((DropDownList)Master.FindControl("DropDownListShoppingCart"));
 			shoppingCart.Items.Clear();
+			int quantity = (int)Session["quantity"];
+			shoppingCart.Items.Add(string.Format("Cart ({0})", quantity));
 
 			foreach (var item in order.OrderRows)
 			{
@@ -49,24 +55,32 @@ namespace NetProject2WallMountainStar
 
 		protected void Button_SubmitOrder_Click(object sender, EventArgs e)
 		{
-			var order = (Order)Session["CurrentOrder"];
-			UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
-			
-		
-			order.Address = TextBox_Address.Text;
-			order.City = TextBox_City.Text;
-			order.Zip = TextBox_Zip.Text;
-			order.UserID = (int)usersTableAdapter.GetUserIdByUsernameQuery(User.Identity.Name);
-			Session["Email"] = TextBox_Email.Text;
+			try
+			{
+				var order = (Order) Session["CurrentOrder"];
+				UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
 
-			WebShopDAL webShopDal = new WebShopDAL();
-			webShopDal.AddOrderToDB(order);
-			Server.Transfer("OrderConfirmationSite.aspx");
+
+				order.Address = TextBox_Address.Text;
+				order.City = TextBox_City.Text;
+				order.Zip = TextBox_Zip.Text;
+				order.UserID = (int) usersTableAdapter.GetUserIdByUsernameQuery(User.Identity.Name);
+				Session["Email"] = TextBox_Email.Text;
+
+				WebShopDAL webShopDal = new WebShopDAL();
+				webShopDal.AddOrderToDB(order);
+				Server.Transfer("OrderConfirmationSite.aspx");
+			}
+			catch(Exception ex)
+			{
+               throw new Exception(ex.Message);
+			}
+		   
 		}
 
-        protected void Button_Cancel_Click(object sender, EventArgs e)
-        {
-            Server.Transfer("WebForm1.aspx");
-        }
+		protected void Button_Cancel_Click(object sender, EventArgs e)
+		{
+			Server.Transfer("WebForm1.aspx");
+		}
 	}
 }

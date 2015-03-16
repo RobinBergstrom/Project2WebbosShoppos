@@ -62,8 +62,10 @@
     <Content Include="Global.asax" />
     <Content Include="Images\andersson-led65510fhdpvr%28205208%29_Small.jpg" />
     <Content Include="Images\lg-55ub950v%28214306%29_Small.jpg" />
+    <Content Include="Images\lg-tv.jpg" />
     <Content Include="Images\samsung-ue48h6475suxxe%28202724%29_Large.jpg" />
     <Content Include="Images\samsung-ue55hu7105uxxe%28210968%29_Large.jpg" />
+    <Content Include="Images\tv.png" />
     <Content Include="Login.aspx" />
     <Content Include="OrderConfirmationSite.aspx" />
     <Content Include="Styles\FirstStyle.css" />

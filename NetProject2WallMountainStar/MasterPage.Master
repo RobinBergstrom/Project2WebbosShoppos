@@ -4,27 +4,31 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-	<title></title>
-	<link href="Styles/FirstStyle.css" rel="stylesheet" />
-	<asp:ContentPlaceHolder ID="head" runat="server">
-	</asp:ContentPlaceHolder>
-	</head>
+    <title></title>
+    <link href="Styles/FirstStyle.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
 <body>
-	<form id="form1" runat="server">
-<header>MasterPageHeader<asp:DropDownList ID="DropDownListShoppingCart" runat="server" EnableViewState="False" OnSelectedIndexChanged="DropDownListShoppingCart_SelectedIndexChanged">
-	<asp:ListItem>Cart</asp:ListItem>
-	</asp:DropDownList>
-		<asp:Button ID="Button_SignOut" runat="server" CausesValidation="False" OnClick="Button_SignOut_Click" Text="Sign out" />
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    <br />
-		</header>
-	<div>
-	</div>
-   
-		<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-		
-		</asp:ContentPlaceHolder>
-	<footer>FOOOTER</footer>
-	</form>
+    <form id="form1" runat="server">
+        <header>
+            <div id="headerWrapper">
+                <asp:DropDownList ID="DropDownListShoppingCart" runat="server" EnableViewState="False" OnSelectedIndexChanged="DropDownListShoppingCart_SelectedIndexChanged">
+                    <asp:ListItem>Cart</asp:ListItem>
+                </asp:DropDownList>
+                <asp:Button ID="Button_ClearCartMaster" runat="server" OnClick="Button_ClearCart_Click" Text="Clear cart" Visible="False" />
+           <div id="signout">   
+                  <asp:Button ID="Button_SignOut" runat="server" CausesValidation="False" OnClick="Button_SignOut_Click" Text="Sign out" />
+                <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+           </div>
+
+            </div>
+        </header>
+        <div id="contentplaceholder">
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+       </div>
+            <footer></footer>
+    </form>
 </body>
 </html>

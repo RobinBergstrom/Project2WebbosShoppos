@@ -14,6 +14,7 @@ namespace NetProject2WallMountainStar
 		{
             Session["CurrentOrder"] = new Order("", "", "",1);
 			string email = (string) Session["Email"];
+		    Session["quantity"] = 0;
 		}
 
 		protected void Button1_Click(object sender, EventArgs e)
