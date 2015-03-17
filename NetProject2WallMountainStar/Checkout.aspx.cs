@@ -55,8 +55,7 @@ namespace NetProject2WallMountainStar
 
 		protected void Button_SubmitOrder_Click(object sender, EventArgs e)
 		{
-			try
-			{
+
 				var order = (Order) Session["CurrentOrder"];
 				UsersTableAdapter usersTableAdapter = new UsersTableAdapter();
 
@@ -70,12 +69,6 @@ namespace NetProject2WallMountainStar
 				WebShopDAL webShopDal = new WebShopDAL();
 				webShopDal.AddOrderToDB(order);
 				Server.Transfer("OrderConfirmationSite.aspx");
-			}
-			catch(Exception ex)
-			{
-               throw new Exception(ex.Message);
-			}
-		   
 		}
 
 		protected void Button_Cancel_Click(object sender, EventArgs e)

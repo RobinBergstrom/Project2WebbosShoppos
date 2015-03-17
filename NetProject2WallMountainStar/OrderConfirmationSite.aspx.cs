@@ -13,7 +13,7 @@ namespace NetProject2WallMountainStar
 		protected void Page_Load(object sender, EventArgs e)
 		{
             Session["CurrentOrder"] = new Order("", "", "",1);
-			string email = (string) Session["Email"];
+			//string email = (string)Session["Email"];
 		    Session["quantity"] = 0;
 		}
 
