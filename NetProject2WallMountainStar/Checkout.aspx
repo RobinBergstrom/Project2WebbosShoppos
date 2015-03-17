@@ -34,8 +34,8 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="TextBox_Zip" runat="server"></asp:TextBox>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox_Zip" ErrorMessage="Enter a valid Zip-code ddd dd" ForeColor="Red" ValidationExpression="\d{5}">*</asp:RegularExpressionValidator>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" ControlToValidate="TextBox_Zip" ErrorMessage="Enter a Zip code" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="TextBox_Zip" ErrorMessage="Enter a valid Zip-code" ForeColor="Red" ValidationExpression="\d{5}">*</asp:RegularExpressionValidator>
                             </td>
                         </tr>
                         <tr>
@@ -44,8 +44,8 @@
                             </td>
                             <td>
                                 <asp:TextBox ID="TextBox_Email" runat="server"></asp:TextBox>
-                                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox_Email" ErrorMessage="Enter a valid email address" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                                 <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="TextBox_Email" ErrorMessage="Enter a email address" ForeColor="Red">*</asp:RequiredFieldValidator>
+                                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ControlToValidate="TextBox_Email" ErrorMessage="Enter a valid email address" ForeColor="Red" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                             </td>
                         </tr>
 

@@ -56,14 +56,15 @@ namespace NetProject2WallMountainStar
 			Session["quantity"] = quantity;
 			bool hasAdded = false;
 			int articleid = (int.Parse(GridView1.SelectedRow.Cells[1].Text));
-			order.OrderRows.ForEach(x =>
+
+			foreach (var row in order.OrderRows)
 			{
-				if (x.ArticleID == articleid)
+				if (row.ArticleID == articleid)
 				{
-					x.Quantity++;
+					row.Quantity++;
 					hasAdded = true;
 				}
-			});
+			}
 			if (!hasAdded)
 			{
 				order.OrderRows.Add(new OrderRow(int.Parse(GridView1.SelectedRow.Cells[1].Text), 1));

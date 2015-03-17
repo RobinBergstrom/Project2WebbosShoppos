@@ -19,20 +19,17 @@ namespace NetProject2WallMountainStar
 
         protected void Button_Login_Click(object sender, EventArgs e)
         {
-            try
-            {
-
+			try
+			{
                 if (UserData.Authenticate(TextBox_Username.Text, TextBox_Password.Text))
                 {
                     FormsAuthentication.RedirectFromLoginPage(TextBox_Username.Text, false);
-
                 }
-            }
-            catch (DbException dbe)
-            {
-             Server.Transfer("ErrorPage.aspx"); 
-  
-            }
+			}
+			catch (DbException dbe)
+			{
+			 Server.Transfer("ErrorPage.aspx"); 
+			}
         }
     }
 }

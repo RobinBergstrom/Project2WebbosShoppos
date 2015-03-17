@@ -26,10 +26,7 @@ namespace NetProject2WallMountainStar
 
 		protected void DropDownListShoppingCart_SelectedIndexChanged(object sender, EventArgs e)
 		{
-
 		}
-
-	   
 	    protected void Button_ClearCart_Click(object sender, EventArgs e)
 		{
 			Session["CurrentOrder"] = new Order("", "", "", 1);
@@ -37,9 +34,6 @@ namespace NetProject2WallMountainStar
 
 	        DropDownListShoppingCart.Items.Clear();
             DropDownListShoppingCart.Items.Add(string.Format("Cart ({0})", 0));
-		
-
 		}
-        
 	}
 }
